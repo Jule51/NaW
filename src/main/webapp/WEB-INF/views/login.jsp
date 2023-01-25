@@ -6,6 +6,7 @@
 <html>
 <script type="text/javascript">
 	console.log("Javascript funktioniert!");
+	
 </script>
 	<head>
 		<meta charset="UTF-8">
