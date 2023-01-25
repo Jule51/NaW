@@ -1,4 +1,4 @@
-package poker;
+package de.jaenner.bo;
 
 import java.awt.BorderLayout;
 import javax.swing.GroupLayout;

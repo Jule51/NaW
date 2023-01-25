@@ -1,4 +1,4 @@
-package poker;
+package de.jaenner.bo;
 import javax.swing.JOptionPane;
 public class Controller {
 	private Model model;

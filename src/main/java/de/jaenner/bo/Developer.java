@@ -1,4 +1,4 @@
-package poker;
+package de.jaenner.bo;
 
 public class Developer {
 
