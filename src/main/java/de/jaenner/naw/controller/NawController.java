@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import de.jaenner.bo.User;
 import de.jaenner.naw.dao.NawDao;
 
 @Controller
@@ -29,7 +30,7 @@ public class NawController {
 		@RequestParam(required = false) String account) {
 		System.out.println("RequestMapping / ");
 		
-		return "login";
+		return "welcome";
 	}
 	
 	@GetMapping(value="/data")
@@ -44,8 +45,13 @@ public class NawController {
 		return rueckgabeMap;
 	}
 	
-	@GetMapping(value="/list")
-	public @ResponseBody List<Map<String, Object>> list() {
-		return dao.team();
+	@GetMapping(value="/team", params="team")
+	public @ResponseBody List<User> list(@RequestParam String team_id) {
+		return dao.team(team_id);
+	}
+	
+	@GetMapping(value="/admin")
+	public @ResponseBody List<User> getAdmin() {
+		return dao.admin();
 	}
 }

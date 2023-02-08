@@ -1,0 +1,31 @@
+CREATE TABLE public.user (
+	id varchar NOT NULL,
+	"name" varchar NULL,
+	team varchar NULL,
+	CONSTRAINT user_pkey PRIMARY KEY (id)
+);
+
+CREATE TABLE public.team (
+	id varchar NOT NULL,
+	"name" varchar NULL,
+	"admin" varchar NULL,
+	CONSTRAINT team_pkey PRIMARY KEY (id),
+	FOREIGN KEY (admin) REFERENCES public.user(id)
+);
+
+CREATE TABLE public.story (
+	id varchar NOT NULL,
+	storyline varchar NULL,
+	ersteller varchar NULL,
+	CONSTRAINT story_pkey PRIMARY KEY (id)
+);
+
+CREATE TABLE public.poker (
+	id varchar NOT NULL,
+	team_id varchar NULL,
+	ergebnis varchar NULL,
+	story_id varchar NULL,
+	CONSTRAINT poker_pkey PRIMARY KEY (id),
+	FOREIGN KEY (team_id) REFERENCES public.team(id),
+	FOREIGN KEY (story_id) REFERENCES public.story(id)
+);

@@ -12,7 +12,7 @@
 		<meta name="viewport">
 		<title>welcome</title>
 	</head>
-	<body>
-	
+	<body id="welcome_page">
+	Wilkommen zum PP
 	</body>
 </html>
