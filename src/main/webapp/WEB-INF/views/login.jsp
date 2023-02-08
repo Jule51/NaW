@@ -7,6 +7,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport">
+		<link href="css/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
 		<title>Login</title>
 	</head>
 	<body>
